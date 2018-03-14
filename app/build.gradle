@@ -1,0 +1,28 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 16
+    buildToolsVersion "27.0.3"
+
+    defaultConfig {
+        applicationId "com.glove.imz"
+        minSdkVersion 5
+        targetSdkVersion 16
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+}
+
+dependencies {
+    compile files('libs/gdx-backend-android.jar')
+    compile files('libs/gdx-box2d-natives.jar')
+    compile files('libs/gdx-box2d.jar')
+    compile files('libs/gdx-freetype-natives.jar')
+    compile files('libs/gdx-freetype.jar')
+    compile files('libs/gdx.jar')
+}
